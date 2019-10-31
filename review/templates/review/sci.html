@@ -1,0 +1,18 @@
+{% extends 'review/base.html' %}
+
+{% block content %}
+
+{% for rev in sci %}
+    <div>
+
+<h2>{{rev.title}}</h2>
+<p> Author: {{rev.author}}</p>
+<p> Price: ${{rev.price}}</p>
+<p> Genre: {{rev.genre}}</p>
+<p> Review: {{rev.review}}</p>
+
+
+    </div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'review/base.html' %}
+
+{% block content %}
+{% for rev in revs %}
+
+    <div>
+        <h2><a href="{% url 'rev_detail' pk=rev.pk %}">{{rev.title}}</a></h2>
+        <p> Author: {{rev.author}}</p>
+        <p> Price: ${{rev.price}}</p>
+        <p> Genre: {{rev.genre}}</p>
+        <p> Age:  {{rev.age}}</p>
+        <p> Review: {{rev.review}}</p>
+
+    </div>
+        {% endfor %}
+
+
+{% endblock %}

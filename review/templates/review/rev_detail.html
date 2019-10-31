@@ -1,0 +1,16 @@
+{% extends 'review/base.html' %}
+
+{% block content %}
+
+<div class="post">
+<div>
+    <a class="btn btn-default" href="{% url 'rev_detail' pk=revd.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    <h2>{{revd.title}}</h2>
+    <p> Author: {{revd.author}}</p>
+    <p> Price: ${{revd.price}}</p>
+    <p> Genre: {{revd.genre}}</p>
+    <p>Review: {{revd.review}}</p>
+</div>
+
+
+{% endblock %}
